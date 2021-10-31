@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 @include('partials/head.html')
 
 <body>
   <div class="site-container">
     @include('partials/header.html')
-    <div class="page" style="background-image: url('img/bg-factory.png');">
-      <div class="container">
-        <h2 class="page-header ">Производство</h2>
-        <div class="text">
-          <p>
-            Продажа рыбы — это важная часть деятельности нашей компании, но также мы занимаемся и производством.
-            Ответственным, скрупулезно контролируемым производством, в результате которого получаются отличные
-            продукты.
-          </p>
-
+    <section class="general general--msg">
+      <div class="container general__container">
+        <div class="general__msg">
+          Ваша заявка принята. <br>
+Спасибо!
         </div>
       </div>
-    </div>
+    </section>
     @include('partials/footer.html')
     <!-- @include('html/h1.html') пример инклуда -->
   </div>

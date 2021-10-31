@@ -1,64 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
+  @include('partials/head.html')
 
-@include('partials/head.html')
+  <body>
+    <div class="site-container">
+      @include('partials/header.html')
+      <section class="general">
+        <div class="container general__container">
+          <h1 class="general__header">Уважаемый коллега!</h1>
 
-<body>
-  <div class="site-container">
-    @include('partials/header.html')
-    <section class="general">
-      <div class="container general__container">
-        <h1 class="general__header">
-          мурманский
-          <br>
-          меридиан
-        </h1>
+          <p class="general__desc">
+            Для того, чтобы решать имеющиеся проблемы, нам очень важна обратная
+            связь! В этой форме ты можешь указать свои претензии, пожелания и
+            предложения. Информация предоставляется анонимно и будет
+            использоваться для улучшения качества работы компании.
+          </p>
 
-        <a href="/" class="btn btn-success btn-arrow-right btn-lg">Получить прайс-лист</a>
-
-        <div class="general__cards">
-          <div class="cardo">
-            <div class="cardo__header">
-              <img src="./img/cardo1.png" alt="" class="cardo__img">Высокое качество
+          <form action="" class="form">
+            <div class="row">
+              <div class="col-sm form-item-1">
+                <select name="" class="form-control" id="">
+                  <option value="0">Выберите ваш город</option>
+                  <option value="1">Москва</option>
+                  <option value="2">Нижний Новгород</option>
+                </select>
+              </div>
+              <div class="col-sm form-item-2">
+                <select name="" class="form-control" id="">
+                  <option value="0">Выберите ваше кафе</option>
+                  <option value="1">Москва</option>
+                  <option value="2">Нижний Новгород</option>
+                </select>
+              </div>
             </div>
-            <div class="cardo__text">
-              Мы поставляем только качественную продукцию под чутким контролем наших сотрудников. Все позиции имеют
-              ветеринарные свидетельства.
+            <div class="row general__text">
+              <div class="col-12">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="form-control"
+                ></textarea>
+              </div>
             </div>
-          </div>
-
-          <div class="cardo">
-            <div class="cardo__header">
-              <img src="./img/cardo2.png" alt="" class="cardo__img">Широкий ассортимент
+            <div class="row general__footer">
+              <div class="col-sm">
+                <label for="file" class="btn btn--outline">
+                  Прикрепить файл
+                </label>
+                <input type="file" name="" id="file" />
+                <span class="file-name"></span>
+              </div>
+              <div class="col-sm">
+                <button class="btn btn-primary">Отправить</button>
+              </div>
             </div>
-            <div class="cardo__text">Реализуем охлажденную рыбу, морепродукты, и рыбные полуфабрикаты.
-            </div>
-          </div>
-
-          <div class="cardo">
-            <div class="cardo__header">
-              <img src="./img/cardo3.png" alt="" class="cardo__img">Выгодные условия
-            </div>
-            <div class="cardo__text">
-              Продаем продукцию по оптовым ценам независимо от объема заказа. Новым клиентам гарантируем выгодные
-              спецпредложения!
-            </div>
-          </div>
+          </form>
         </div>
-      </div>
-    </section>
-    @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример инклуда -->
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
-  </script>
+      </section>
+      @include('partials/footer.html')
+      <!-- @include('html/h1.html') пример инклуда -->
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
