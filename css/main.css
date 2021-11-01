@@ -19,7 +19,8 @@
 
 .general {
   position: relative;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
+  padding-bottom: 20px;
   overflow: hidden; }
   .general::before {
     position: absolute;
@@ -125,5 +126,9 @@ select.form-control {
 @media (max-width: 580px) {
   .form-item-1 {
     margin-bottom: 20px; } }
+
+@media (max-height: 840px) {
+  .general--msg::before {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
