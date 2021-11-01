@@ -9,6 +9,9 @@ $primary: #F4793B;
   font-size: 14px;
 }
 
+.container {
+  max-width: 624px;
+}
 
 .header {
   background-color: $primary;
@@ -59,19 +62,22 @@ $primary: #F4793B;
   }
 
   &__desc {
-    font-size: 14px;
-    margin-bottom: 60px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
   }
 
   &__header {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 60px;
     font-weight: normal;
+    text-align: center;
   }
 
   &__text {
     margin-top: 20px;
   }
+
   &__footer {
     margin-top: 20px;
     .btn {
@@ -98,6 +104,13 @@ $primary: #F4793B;
 
 .form-control {
   height: 50px;
+}
+
+select.form-control {
+  position: relative;
+  background: url('../img/down.svg') no-repeat 95% center;
+  background-color: white;
+  background-size: 11px 11px;
 }
 
 .file-name {

@@ -1,4 +1,5 @@
 const {src, dest, series, watch} = require('gulp');
+const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const cleanCSS = require('gulp-clean-css');
@@ -18,12 +19,18 @@ const notify = require('gulp-notify');
 const image = require('gulp-image');
 const { readFileSync } = require('fs');
 const concat = require('gulp-concat');
+const ghPages = require('gulp-gh-pages');
 
 let isProd = false; // dev by default
 
 const clean = () => {
 	return del(['app/*'])
 }
+
+gulp.task('deploy', function() {
+  return gulp.src('./app/**/*')
+    .pipe(ghPages());
+});
 
 //svg sprite
 const svgSprites = () => {
