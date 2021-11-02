@@ -86,7 +86,9 @@ body {
 
 .form-control {
   height: 50px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 300; }
 
 select.form-control {
   position: relative;
@@ -165,5 +167,11 @@ select.form-control {
 @media (max-height: 840px) {
   .general--msg::before {
     display: none; } }
+
+@media (max-height: 768px) {
+  body {
+    min-height: 1080px; }
+  .general {
+    min-height: calc(1080px - 100px); } }
 
 /*# sourceMappingURL=main.css.map */
