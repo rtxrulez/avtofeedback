@@ -1,14 +1,16 @@
-.body {
-  font-family: var(--museo0);
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px; }
+body {
+  min-height: 100vh; }
 
 .container {
   max-width: 624px; }
 
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
 .header {
-  background-color: #F4793B;
+  background-color: #f4793b;
   height: 100px;
   display: flex;
   align-items: center; }
@@ -19,41 +21,47 @@
 
 .general {
   position: relative;
-  min-height: calc(100vh - 100px);
+  min-height: calc(1080px - 100px);
+  height: calc(100vh - 100px);
   padding-bottom: 20px;
   overflow: hidden; }
   .general::before {
     position: absolute;
-    bottom: 0;
-    left: -32px;
-    content: '';
+    bottom: -16px;
+    left: -22px;
+    content: "";
     background: url(../img/girl.png) no-repeat center center;
     display: block;
-    width: 400px;
-    height: 660px;
+    width: 567px;
+    height: 937px;
     background-size: 100%; }
   .general::after {
     position: absolute;
     bottom: 0;
     right: 0;
-    content: '';
+    content: "";
     background: url(../img/men.png) no-repeat center center;
     display: block;
-    width: 400px;
-    height: 620px; }
+    width: 614px;
+    height: 935px;
+    background-size: 100%; }
   .general--msg {
     display: flex;
     align-items: center;
     height: calc(100vh - 100px);
     justify-content: center; }
+  .general__container {
+    margin-top: 163px; }
   .general__desc {
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 40px;
-    text-align: justify; }
+    text-align: justify;
+    line-height: 1.2; }
   .general__header {
     font-size: 18px;
-    margin-top: 60px;
+    margin-top: 0;
+    margin-bottom: 19px;
     font-weight: normal;
     text-align: center; }
   .general__text {
@@ -73,9 +81,12 @@
   .general__container {
     position: relative;
     z-index: 1; }
+  .general textarea.form-control {
+    min-height: 193px; }
 
 .form-control {
-  height: 50px; }
+  height: 50px;
+  border-radius: 10px; }
 
 select.form-control {
   position: relative;
@@ -92,24 +103,47 @@ select.form-control {
   .file-name:empty {
     display: none; }
 
+.btn {
+  border-radius: 10px; }
+
 .btn-primary {
-  background: #F4793B;
+  background: #f4793b;
   color: white;
-  border-color: #F4793B; }
+  border-color: #f4793b; }
   .btn-primary:hover, .btn-primary:focus {
-    background: #F4793B;
+    background: #f4793b;
     color: white;
-    border-color: #F4793B; }
+    border-color: #f4793b; }
 
 .btn--outline {
   background-color: white;
-  border: 1px solid #F4793B;
-  color: #F4793B;
+  border: 1px solid #f4793b;
+  color: #f4793b;
   line-height: 2; }
   .btn--outline:hover, .btn--outline:focus {
-    color: #F4793B;
+    color: #f4793b;
     background-color: white;
-    border: 1px solid #F4793B; }
+    border: 1px solid #f4793b; }
+
+@media (max-width: 1400px) {
+  .general {
+    min-height: calc(768px - 100px); }
+    .general::before {
+      width: 402px;
+      height: 624px;
+      left: -51px;
+      bottom: 0px; }
+    .general::after {
+      width: 409px;
+      height: 623px;
+      bottom: 0; }
+    .general__container {
+      margin-top: 56px; }
+    .general__header {
+      margin-bottom: 5px; }
+    .general__desc {
+      font-size: 14px;
+      margin-bottom: 21px; } }
 
 @media (max-width: 768px) {
   .general::before, .general::after {
