@@ -1,16 +1,19 @@
 // @import 'vars'; если используете scss-переменные - подключите сюда vars, но удалите root из _vars.scss
 
-$primary: #F4793B;
+$primary: #f4793b;
 
-.body {
-  font-family: var(--museo0);
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
+body {
+  min-height: 100vh;
 }
 
 .container {
   max-width: 624px;
+}
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
@@ -28,19 +31,20 @@ $primary: #F4793B;
 
 .general {
   position: relative;
-  min-height: calc(100vh - 100px);
+  min-height: calc(1080px - 100px);
+  height: calc(100vh - 100px);
   padding-bottom: 20px;
   overflow: hidden;
 
   &::before {
     position: absolute;
-    bottom: 0;
-    left: -32px;
-    content: '';
+    bottom: -16px;
+    left: -22px;
+    content: "";
     background: url(../img/girl.png) no-repeat center center;
     display: block;
-    width: 400px;
-    height: 660px;
+    width: 567px;
+    height: 937px;
     background-size: 100%;
   }
 
@@ -48,11 +52,12 @@ $primary: #F4793B;
     position: absolute;
     bottom: 0;
     right: 0;
-    content: '';
+    content: "";
     background: url(../img/men.png) no-repeat center center;
     display: block;
-    width: 400px;
-    height: 620px;
+    width: 614px;
+    height: 935px;
+    background-size: 100%;
   }
 
   &--msg {
@@ -62,16 +67,22 @@ $primary: #F4793B;
     justify-content: center;
   }
 
+  &__container {
+    margin-top: 163px;
+  }
+
   &__desc {
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 40px;
     text-align: justify;
+    line-height: 1.2;
   }
 
   &__header {
     font-size: 18px;
-    margin-top: 60px;
+    margin-top: 0;
+    margin-bottom: 19px;
     font-weight: normal;
     text-align: center;
   }
@@ -102,15 +113,20 @@ $primary: #F4793B;
     position: relative;
     z-index: 1;
   }
+
+  textarea.form-control {
+    min-height: 193px;
+  }
 }
 
 .form-control {
   height: 50px;
+  border-radius: 10px;
 }
 
 select.form-control {
   position: relative;
-  background: url('../img/down.svg') no-repeat 95% center;
+  background: url("../img/down.svg") no-repeat 95% center;
   background-color: white;
   background-size: 11px 11px;
 }
@@ -125,6 +141,10 @@ select.form-control {
   &:empty {
     display: none;
   }
+}
+
+.btn {
+  border-radius: 10px;
 }
 
 .btn-primary {
@@ -151,6 +171,37 @@ select.form-control {
     color: $primary;
     background-color: white;
     border: 1px solid $primary;
+  }
+}
+
+@media (max-width: 1400px) {
+  .general {
+    min-height: calc(768px - 100px);
+    &::before {
+      width: 402px;
+      height: 624px;
+      left: -51px;
+      bottom: 0px;
+    }
+
+    &::after {
+      width: 409px;
+      height: 623px;
+      bottom: 0;
+    }
+
+    &__container {
+      margin-top: 56px;
+    }
+
+    &__header {
+      margin-bottom: 5px;
+    }
+
+    &__desc {
+      font-size: 14px;
+      margin-bottom: 21px;
+    }
   }
 }
 
@@ -183,7 +234,6 @@ select.form-control {
     margin-bottom: 20px;
   }
 }
-
 
 @media (max-height: 840px) {
   .general {
