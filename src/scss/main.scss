@@ -176,6 +176,7 @@ select.form-control {
   }
 }
 
+
 @media (max-width: 1400px) {
   .general {
     min-height: calc(768px - 100px);
@@ -244,5 +245,15 @@ select.form-control {
         display: none;
       }
     }
+  }
+}
+
+
+@media (max-height: 768px) {
+  body {
+    min-height: 1080px;
+  }
+  .general {
+    min-height: calc(1080px - 100px);
   }
 }
