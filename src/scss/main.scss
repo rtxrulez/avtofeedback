@@ -65,6 +65,11 @@ body {
     align-items: center;
     height: calc(100vh - 100px);
     justify-content: center;
+
+    .general__container {
+      margin-top: 0;
+    }
+
   }
 
   &__container {
