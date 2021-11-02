@@ -50,6 +50,8 @@ body {
     align-items: center;
     height: calc(100vh - 100px);
     justify-content: center; }
+    .general--msg .general__container {
+      margin-top: 0; }
   .general__container {
     margin-top: 163px; }
   .general__desc {
@@ -173,5 +175,9 @@ select.form-control {
     min-height: 1080px; }
   .general {
     min-height: calc(1080px - 100px); } }
+
+@media (max-height: 1024px) and (min-width: 1200px) {
+  .general {
+    min-height: calc(100vh - 100px); } }
 
 /*# sourceMappingURL=main.css.map */
