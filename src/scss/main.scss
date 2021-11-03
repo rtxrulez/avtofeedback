@@ -82,6 +82,7 @@ body {
     margin-bottom: 40px;
     text-align: justify;
     line-height: 1.2;
+    text-indent: 30px;
   }
 
   &__header {
@@ -213,6 +214,13 @@ select.form-control {
   }
 }
 
+@media (max-height: 1024px) and (min-width: 1200px) {
+  .general {
+    min-height: calc(100vh - 100px);
+  }
+}
+
+
 @media (max-width: 768px) {
   .general {
     &::before,
@@ -263,8 +271,3 @@ select.form-control {
 }
 
 
-@media (max-height: 1024px) and (min-width: 1200px) {
-  .general {
-    min-height: calc(100vh - 100px);
-  }
-}
